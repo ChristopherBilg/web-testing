@@ -24,18 +24,6 @@
     float: right;
 }
 
-#menu a {
-    text-decoration: none;
-}
-
-#menu a:link, #menu a:visited {
-    color: #000000;
-}
-
-#menu a:hover, #menu a:active {
-    color: #ffffff;
-}
-
 /* Main Content */
 #content {
     position: absolute;
@@ -76,7 +64,29 @@
     margin-left: 5rem;
 }
 
-/* Other */
+/* Used for clearing the float properties of containers */
 .clear {
     clear: both;
+}
+
+/* Changing the default look and feel of anchor tags */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover, a:active {
+    color: #ffffff;
+}
+
+/* Add a bottom margin to a few tags */
+p {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
 }
