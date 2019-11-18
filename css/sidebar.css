@@ -1,4 +1,9 @@
 /* Changing default initial css properties */
+html {
+    --sidebar-width: 200px;
+    --footer-height: 50px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +14,38 @@
     position: fixed;
     z-index: 1;
     left: 0;
-    width: 200px;
+    width: var(--sidebar-width);
     height: 100%;
-    background: red;
+    background: gray;
+    text-align: center;
+    padding: 10px;
 }
 
 #content {
     position: absolute;
+    height: calc(auto - var(--footer-height));
+    margin-left: var(--sidebar-width);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: calc(var(--footer-height) + 10px);
+}
+
+#footerwhitespace {
+    position: fixed;
+    bottom: var(--footer-height);
+    margin-left: var(--sidebar-width);
+    height: 10px;
+    width: calc(100% - var(--sidebar-width));
+    background: white;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: var(--sidebar-width);
+    height: var(--footer-height);
+    width: calc(100% - var(--sidebar-width));
+    background: gray;
+    text-align: center;
 }
