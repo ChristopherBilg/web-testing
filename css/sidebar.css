@@ -1,0 +1,19 @@
+/* Changing default initial css properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: red;
+}
+
+#content {
+    position: absolute;
+}
