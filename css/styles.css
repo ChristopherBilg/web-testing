@@ -47,21 +47,14 @@
     height: 3rem;
     padding: 1rem;
     background: gray;
-    text-align: center;
-}
-
-#footercontent {
-    display: inline-block;
 }
 
 #signature {
     float: left;
-    margin-right: 5rem;
 }
 
 #socialmedia {
     float: right;
-    margin-left: 5rem;
 }
 
 /* Used for clearing the float properties of containers */
@@ -89,4 +82,13 @@ p {
 
 h1 {
     margin-bottom: 1rem;
+}
+
+/* Screen size media queries */
+@media (max-width:641px) {
+    #content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 150%;
+    }
 }
