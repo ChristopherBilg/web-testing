@@ -7,6 +7,8 @@ html {
     --secondary-link-color: #FFFFFF;
     --header-height: 3em;
     --footer-height: 3em;
+    --header-border-radius: 10px;
+    --footer-border-radius: 10px;
 }
 
 /* Changing default initial css properties */
@@ -25,7 +27,9 @@ html {
     height: var(--header-height);
     padding: 1em;
     background: var(--primary-header-bg-color);
-    color: var(--primary-header-color)
+    color: var(--primary-header-color);
+    border-bottom-left-radius: var(--header-border-radius);
+    border-bottom-right-radius: var(--header-border-radius);
 }
 
 #title {
@@ -64,6 +68,8 @@ html {
     padding: 1em;
     background: var(--primary-footer-bg-color);
     color: var(--primary-footer-color);
+    border-top-left-radius: var(--footer-border-radius);
+    border-top-right-radius: var(--footer-border-radius);
 }
 
 #signature {
