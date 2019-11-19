@@ -1,0 +1,59 @@
+html {
+    --primary-bg-color: #669999;
+    --primary-link-color: #000000;
+    --secondary-link-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bubble {
+    background: var(--primary-bg-color);
+    position: fixed;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    padding: 1%;
+
+    max-width: 100px;
+    min-width: 70px;
+    max-height: 100px;
+    min-height: 70px;
+}
+
+#bubble_1 {
+    top: 10%;
+    left: 10%;
+}
+
+#bubble_2 {
+    top: 10%;
+    right: 10%;
+}
+
+#bubble_3 {
+    bottom: 10%;
+    left: 10%;
+}
+
+#bubble_4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+/* Changing the default look and feel of anchor tags */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: var(--primary-link-color);
+}
+
+a:hover, a:active {
+    color: var(--secondary-link-color);
+}
