@@ -2,6 +2,11 @@
 html {
     --sidebar-width: 200px;
     --footer-height: 50px;
+    --footer-whitespace-height: 10px;
+    --primary-bg-color: #669999;
+    --primary-whitespace-color: #FFFFFF;
+    --primary-link-color: #000000;
+    --secondary-link-color: #FFFFFF;
 }
 
 * {
@@ -13,10 +18,11 @@ html {
 #sidebar {
     position: fixed;
     z-index: 1;
+    top: 0;
     left: 0;
     width: var(--sidebar-width);
-    height: 100%;
-    background: gray;
+    height: calc(100% - var(--footer-height));
+    background: var(--primary-bg-color);
     text-align: center;
     padding: 10px;
 }
@@ -28,24 +34,38 @@ html {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: calc(var(--footer-height) + 10px);
+    padding-bottom: calc(var(--footer-height) + var(--footer-whitespace-height));
 }
 
 #footerwhitespace {
     position: fixed;
-    bottom: var(--footer-height);
-    margin-left: var(--sidebar-width);
-    height: 10px;
+    height: var(--footer-whitespace-height);
     width: calc(100% - var(--sidebar-width));
-    background: white;
+    background: var(--primary-whitespace-color);
+    left: var(--sidebar-width);
+    bottom: var(--footer-height);
 }
 
 #footer {
     position: fixed;
     bottom: 0;
-    margin-left: var(--sidebar-width);
     height: var(--footer-height);
-    width: calc(100% - var(--sidebar-width));
-    background: gray;
+    width: 100%;
+    background: var(--primary-bg-color);
     text-align: center;
+    padding-top: calc(var(--footer-height) / 3);
+    padding-bottom: calc(var(--footer-height) / 3);
+}
+
+/* Changing the default look and feel of anchor tags */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: var(--primary-link-color);
+}
+
+a:hover, a:active {
+    color: var(--secondary-link-color);
 }
