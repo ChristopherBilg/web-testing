@@ -18,6 +18,10 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Header */
 #header {
     position: fixed;
@@ -80,7 +84,7 @@ html {
     float: right;
 }
 
-/* Used for clearing the float properties of containers */
+/* Used for clearing the float properties */
 .clear {
     clear: both;
 }
