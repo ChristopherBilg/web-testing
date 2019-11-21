@@ -4,6 +4,9 @@ html {
     --header-height: 3em;
     --footer-bg-color: #669999;
     --footer-height: 3em;
+    --menu-primary-color: #000000;
+    --menu-secondary-color: #669999;
+    --menu-bar-size: 19%;
 }
 
 /* RESETS */
@@ -19,7 +22,7 @@ body {
 }
 
 /* Header & Footer */
-.bars {
+.headfoot {
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -34,16 +37,30 @@ body {
     border-bottom-right-radius: 15px;
 }
 
-#header #title {
+#title {
     float: left;
     padding-top: calc((var(--header-height) - 1em) / 2);
     padding-left: 1em;
 }
 
-#header #menu {
+#menu {
     float: right;
-    padding-top: calc((var(--header-height) - 1em) / 2);
-    padding-right: 1em;
+    height: 1em;
+    width: 2em;
+    margin: calc((var(--header-height) - 1em) / 2);
+}
+
+.bar {
+    position: relative;
+    height: var(--menu-bar-size);
+}
+
+.bar.primary {
+    background-color: var(--menu-primary-color);
+}
+
+.bar.secondary {
+    background-color: var(--menu-secondary-color);
 }
 
 /* Content */
@@ -51,9 +68,13 @@ body {
     position: absolute;
     margin-top: var(--header-height);
     margin-bottom: var(--footer-height);
-    height: auto;
+    height: calc(100% - var(--header-height) - var(--footer-height));
     width: 100%;
     padding: 1em;
+}
+
+#content h1 {
+    text-align: center;
 }
 
 /* Footer */
