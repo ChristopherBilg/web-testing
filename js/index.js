@@ -4,17 +4,17 @@
   "use strict";
 
   var menu = document.getElementById("menu");
-  var content = document.getElementById("content");
+  var title = document.getElementById("title");
   var isEnabled = false;
   
   menu.onclick = function() {
     if(isEnabled === false) {
       isEnabled = true;
-      content.style.backgroundColor = "red";
+      title.style.color = "red";
     }
     else {
       isEnabled = false;
-      content.style.backgroundColor = "";
+      title.style.color = "";
     }
   };
 })();
