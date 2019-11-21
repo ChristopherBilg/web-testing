@@ -96,7 +96,34 @@ body {
 /* Responsive Design */
 /* Desktop */
 @media (min-width: 1025px) {
-    body {
-        background-color: #ff00ff;
+    html {
+        font-size: 16px;
+        --header-height: 1.5em;
+        --footer-height: 1.5em;
+    }
+
+    #content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 16px;
+        margin-top: calc(var(--header-height) * 2);
+        margin-bottom: calc(var(--footer-height) * 2);
+    }
+
+    #menu {
+        width: 1em;
+    }
+
+    #header {
+        border-radius: 0px;
+    }
+
+    #title {
+        padding-left: .25em;
+    }
+
+    #footer {
+        font-size: 20px;
+        border-radius: 0px;
     }
 }
